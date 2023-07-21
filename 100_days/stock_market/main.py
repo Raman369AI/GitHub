@@ -6,10 +6,10 @@ def magnitude(x):
         return 1
     elif x==0:
         return 0
-    else:
+    elif x<0:
         return -1
 
-SBIN = yf.Ticker("SBIN.NS").history(period='7d',interval='1m')
+SBIN = yf.Ticker("SBIN.NS").history(period='7d',interval='5m')
 SBIN=pd.DataFrame(SBIN)
 SBIN["direction"]=SBIN["Close"] - SBIN["Open"]
 #use apply() method to apply the defined function for each row of the selected column
@@ -18,8 +18,8 @@ SBIN = SBIN.dropna()
 SBIN = SBIN.round({"Close": 0})
 SBIN = SBIN.pivot_table(index=[SBIN["Close"]])
 
-SBIN["True_volume"] = (SBIN["Volume"])*SBIN["direction"]
+SBIN["True_volume"] = SBIN["direction"]
 SBIN = SBIN.round({"Volume": 0})
 print(SBIN)
-plt.scatter(SBIN.index, SBIN["True_volume"])
+plt.scatter(SBIN.index, SBIN["direction"])
 plt.show()
