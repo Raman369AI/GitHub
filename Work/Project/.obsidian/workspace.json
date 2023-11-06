@@ -1,52 +1,39 @@
 {
   "main": {
-    "id": "8c045133863b6c79",
+    "id": "9622c24ebb06f934",
     "type": "split",
     "children": [
       {
-        "id": "9a806dd0408730c8",
+        "id": "5d93f23d994d389b",
         "type": "tabs",
         "children": [
           {
-            "id": "e5d9e257b08fb0cd",
+            "id": "024362f168cba2e8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2023-10-11.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b26b0489c0645dc3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2023-10-11.md",
+                "file": "Python-Pandas.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "f4d9bbb339ede382",
+    "id": "ca6634d189bf27ab",
     "type": "split",
     "children": [
       {
-        "id": "edd61f73a4572405",
+        "id": "00874d642da1393a",
         "type": "tabs",
         "children": [
           {
-            "id": "84dc202885a95cca",
+            "id": "592dabd03c70e721",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -56,7 +43,7 @@
             }
           },
           {
-            "id": "486dca64fb421c56",
+            "id": "e3ac0a02e795e9c6",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -71,7 +58,7 @@
             }
           },
           {
-            "id": "f016541c446a04fb",
+            "id": "c33b3865f31aeba6",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -82,23 +69,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-    "id": "c2ebfe5383870c0d",
+    "id": "e2a6458a0bbb0c51",
     "type": "split",
     "children": [
       {
-        "id": "b238c240fa8918da",
+        "id": "0951818110b5d8ff",
         "type": "tabs",
         "children": [
           {
-            "id": "2934c34140f41329",
+            "id": "c784d641bfe236d3",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2023-10-11.md",
+                "file": "Python-Pandas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,19 +98,19 @@
             }
           },
           {
-            "id": "264452e6ecbb4a95",
+            "id": "2f2d891bc63e70e3",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2023-10-11.md",
+                "file": "Python-Pandas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "580a0a17b5c0f847",
+            "id": "c715b56ecc757ec8",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,25 +121,24 @@
             }
           },
           {
-            "id": "32fa0543a8babbab",
+            "id": "b1035cebe8b91b5e",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023-10-11.md"
+                "file": "Python-Pandas.md"
               }
             }
           },
           {
-            "id": "3111c410aa032a62",
+            "id": "faa42dd207e86cb6",
             "type": "leaf",
             "state": {
-              "type": "advanced-tables-toolbar",
+              "type": "calendar",
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -167,31 +154,16 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "zk-prefixer:Create new unique note": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-day-planner:Week plan": false
     }
   },
-  "active": "b26b0489c0645dc3",
+  "active": "024362f168cba2e8",
   "lastOpenFiles": [
-    "2023-10-25.md",
-    "2023-10-24.md",
-    "2023-10-22.md",
-    "2023-10-19.md",
-    "2023-10-11.md",
-    "Project/202310111630.md",
-    "Project/Python-Pandas.md",
-    "Project/202310111834.md",
-    "Untitled",
-    "202310111623.md",
-    "Project/Untitled.md",
-    "Project",
-    "Yearly goals.md",
-    "202310111547.md",
-    "202310111548.md",
-    "Untitled.canvas",
-    "2023-07-19.md",
-    "2023-07-18.md",
-    "Analyze.md",
-    "Project/Planning.md",
-    "2023-05-26.md"
+    "Python-Pandas.md",
+    "202310111630.md",
+    "Untitled.md"
   ]
 }

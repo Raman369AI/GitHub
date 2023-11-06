@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6124551f-efbf-4e3a-a871-aeaac1aed860" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../100_days/stock_market/testdb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../100_days/stock_market/.idea/stock_market.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../100_days/stock_market/.idea/stock_market.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../100_days/stock_market/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../100_days/stock_market/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Work/.obsidian/core-plugins-migration.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Work/.obsidian/core-plugins-migration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Work/.obsidian/workspace.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Work/.obsidian/workspace.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Work/2023-07-18.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Work/2023-07-19.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2VgIn5LuYxDVHgYB8Mqy5DTwtYj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6124551f-efbf-4e3a-a871-aeaac1aed860" name="Changes" comment="" />
+      <created>1695251459983</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695251459983</updated>
+    </task>
+    <servers />
+  </component>
+</project>

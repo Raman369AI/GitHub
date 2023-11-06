@@ -7,12 +7,13 @@
   "canvas": true,
   "outgoing-link": true,
   "tag-pane": true,
+  "properties": false,
   "page-preview": true,
   "daily-notes": true,
   "templates": true,
   "note-composer": true,
   "command-palette": true,
-  "slash-command": false,
+  "slash-command": true,
   "editor-status": true,
   "bookmarks": true,
   "markdown-importer": false,
@@ -20,11 +21,10 @@
   "random-note": false,
   "outline": true,
   "word-count": true,
-  "slides": false,
+  "slides": true,
   "audio-recorder": false,
   "workspaces": false,
   "file-recovery": true,
   "publish": false,
-  "sync": false,
-  "properties": false
+  "sync": true
 }
