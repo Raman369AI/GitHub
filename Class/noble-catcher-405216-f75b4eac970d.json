@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "noble-catcher-405216",
+  "private_key_id": "f75b4eac970dcab1bd12125e6bed9beac3ec6208",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQC3WgmRz8XEB0Ya\ncSbzUMKO/JPfP52pp9xOIr/VakxM+YPtd414VUDcN2m/62pCqKBEl6AvpaoCFHV1\nQuSKPOUG7cXGrZ6XWXkTIPFi9sWstZyyR7nWO2Hks0/7RH2mrDhaE1fnIJXGrcaf\nghuA9u605JciEnn03lbmUg6jg4KGSycvl8hxkNnOQpDuDq9D/5J/Wq3dEHB9L+YE\n/3E5aal8EALIqBKVAcY5FyoLGvz72mE1qDWsYsYYkclyAiLTQQL7VrYwwBXX2bg1\nB3+lS5g4ddEPuMSY6FAzRadEq91P9vd1kMC+Va7xZmJ9exmKfLayMx/i0BNYYLNn\nMC7KYfDNAgMBAAECgf8/HLS97NE6x4OhqurmWy3k/9jw4P8xCrWNJYevpsic1R1/\n3YhkKwjWhzI7oEgH3SIu9QyKtkhobt/WkbUjefuE16/V8SCbsKFOZPQOMSDPuL4t\nGsDS8w53oGAay6vQ3Fh05nET4Gsy+GC4NTnRxCOuXgtBZ4EiqfU/pIRbNRykO3G7\nl1msVKkLHr76M8dHFnvdG9rxVSAD03+NCWtt7VgVdJDq/25XLUn2vVF6HBpYsEsu\nnXLdlMNhk4KZbWWPV+HIcae2swN7EHp1DXH1qwbG6W9cSkBJedeM03ldXUq0ZT6k\ndyC14M2LEFw/dd++SIcNjZrmhBB97Cl5jcWopjUCgYEA41FXoYSWr5dwmdv87bUy\nSQr59IWbRKAoOxhNxsxgoZ1KZh8AAx3ECMzAlbv/M6ydpRQl1ovALLvRC3dc1rxC\nRBHU1dgIAXP1+k42aLDCz0GTjdyL/ib0qxESTlOTesTLO4nRvXvU06Zzb5FcoXG9\n5a2lRLUTrWj0vLCeOuDfC1sCgYEAznyJAPjTxyqPLYUlhfHZQGpKESjHXSu58jmU\nALC0gqrUdR1E+CvqzNF4Y5IxkzocxzKCDLx+9OzoOBDKQxAUs/h7BpW+N6iSoh+5\nyJj7/BR2gWRQphcsyrVZ23eMishGBv7VLaD2Ar2QzaTw6UUHAakZQAFXwBaBMFvT\neO42tPcCgYBuhmlePjJqE+8K0Dytc3GMtEqOSrwQ5PJKsWl3pH3Dds/q0V3XJgzf\n3nYxF6RhAqfv0NkI9RAub++XbKT2P7jUkfrzMsPJuRE7b/XidzdxQEg3LKngnB5Q\nYs+Mx/QoODE8tKkHQYNcmUz9TSdF1CDp4ME/o+96XFLKv/FfXWD1iwKBgAY5ywe0\neO4wYlDFCvSW7i37BnCuAhTVFK4w/j1nFoo6DF3bnBC/gjzas/6MkeIWhnebFkC8\nDjfkTLwkBXUwLu+eNldkfG/BLWql+jwKIM7g7xHHrIbVfAxAm4z6dcpZb4MWe+b8\nS26ZuJv6tSjTY/qw1ooPgE3SX+LNYfrrc8rRAoGBAKk2yU2JRWb4qPipYtlm+duU\nytAugCyrOWIkDu4OqP4fJBO5oDLWNCG0NGxSJKsG5oJ2hIbMlqxIaqGBKbJaXC0+\nFCi7UhynQKLiMYAr81ZAhhBcE3o6y4IpZD8ZUbDoJHUS2VYWaoj/5sD39ttXeojt\nkLcewD9e7MNUgpEXskz6\n-----END PRIVATE KEY-----\n",
+  "client_email": "nlpanalysis@noble-catcher-405216.iam.gserviceaccount.com",
+  "client_id": "106698016446604011006",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nlpanalysis%40noble-catcher-405216.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

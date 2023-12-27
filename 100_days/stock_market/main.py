@@ -1,7 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import yfinance as yf
-
+from pandas_profiling import ProfileReport
+profile = ProfileReport(df)
 
 def magnitude(x):
     return 1 if x > 0 else -1
@@ -10,6 +11,7 @@ while True:
 
 
     SBIN = yf.Ticker("SBIN.NS").history(period='7d', interval='1m')
+    profile = ProfileReport(SBIN)
     SBIN = pd.DataFrame(SBIN)
     SBIN["direction"] = SBIN["Close"] - SBIN["Open"]
     # use apply() method to apply the defined function for each row of the selected column
