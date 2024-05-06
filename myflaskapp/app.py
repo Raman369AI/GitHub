@@ -12,7 +12,7 @@ DB_USER = 'root'
 DB_PASSWORD = 'raman'
 DB_NAME = 'raman'
 SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{DB_USER}:{DB_PASSWORD}@/'\
-                          f'{DB_NAME}?host=34.172.193.238'
+                          f'{DB_NAME}?host='
 app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 
 # Initialize Database
