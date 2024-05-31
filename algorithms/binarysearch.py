@@ -55,8 +55,9 @@ with open('check.txt','a') as file:
     for i in range(len(tests)):
         print(f"cards: {tests[i]['input']['cards']}")
         print(f"query: {tests[i]['input']['query']}")
-        if locate_cards(**tests[i]['input']) == tests[i]['output']:
-            print(f"Test case passed and position is {locate_cards(**tests[i]['input'])}")
+        query_position = locate_cards(**tests[i]['input']) 
+        if  query_position == tests[i]['output']:
+            print(f"Test case passed and position is {query_position}")
         else:
             print("Test case for no cards or query - passed")
 
