@@ -1,28 +1,14 @@
-interpolation Search
-cards: [55, 54, 53, 52, 51]
-query: 54
-Test case for no cards or query - passed, None
-cards: range(1000000, 0, -2)
-query: 5479
-Test case for no cards or query - passed, The number does not exists in the range
-interpolation Search
-cards: [55, 54, 53, 52, 51]
-query: 54
-Test case for no cards or query - passed, None
-cards: range(1000000, 0, -2)
-query: 5478
-Test case for no cards or query - passed, None
-interpolation Search
-cards: [55, 54, 53, 52, 51]
-query: 54
-Test case for no cards or query - passed, The number does not exists and flawed logic
-cards: range(1000000, 0, -2)
-query: 5478
-Test case for no cards or query - passed, The number does not exists and flawed logic
-interpolation Search
-cards: [55, 54, 53, 52, 51]
-query: 54
+Rotation lists
+Original List: [56, 55, 54, 53, 52]
+Modified list: [52, 56, 55, 54, 53]
 Test case passed and position is 1
-cards: range(1000000, 0, -2)
-query: 5478
-Test case for no cards or query - passed, 497261
+Original List: [56, 55, 54, 53, 52]
+Modified list: [53, 52, 56, 55, 54]
+Test case passed and position is 2
+Rotation lists
+Original List: [57, 56, 55, 54, 53, 52]
+Modified list: [52, 57, 56, 55, 54, 53]
+Test case passed and position is 1
+Original List: [57, 56, 55, 54, 53, 52]
+Modified list: [53, 52, 57, 56, 55, 54]
+Test case passed and position is 2
