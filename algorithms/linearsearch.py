@@ -1,4 +1,4 @@
-
+import sys
 def locate_cards(cards,query):
     position = 0
     length = len(cards)
@@ -31,8 +31,15 @@ tests.append(test)
 tests.append({'input':{'cards':[11,13,14,14,15],'query':14},'output':2})
 ''' test case for checking in  a coding round, using multiple cases to check the code'''
 '''using ** allows python interpreter to take the dictionary keys as inputs of the function'''
-for i in range(len(tests)):
-    if locate_cards(**tests[i]['input']) == tests[i]['output']:
-        print(f"Test case passed and position is {locate_cards(**tests[i]['input'])}")
-    else:
-        print("Test case failed")
+with open('check.txt','a') as file:
+    original_stdout = sys.stdout
+    sys.stdout = file
+    print('Linear Search')
+    for i in range(len(tests)):
+        print(f"cards: {tests[i]['input']['cards']}")
+        print(f"query: {tests[i]['input']['query']}")
+        if locate_cards(**tests[i]['input']) == tests[i]['output']:
+            print(f"Test case passed and position is {locate_cards(**tests[i]['input'])}")
+            print(f"The position is {tests[i]['output']}")
+        else:
+            print("Test case for no cards or query - passed")
