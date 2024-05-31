@@ -1,0 +1,76 @@
+Binary Search
+cards: [11]
+query: 
+Test case for no cards or query - passed
+cards: [55, 55, 54, 54, 52, 51]
+query: 54
+Test case passed and position is 2
+cards: [54, 54, 54, 54, 53, 52, 51]
+query: 54
+Test case passed and position is 0
+cards: [54, 54, 54, 54, 52, 52, 51]
+query: 52
+Test case passed and position is 4
+Binary Search
+cards: [11]
+query: 
+Test case for no cards or query - passed
+cards: [55, 55, 54, 54, 52, 51]
+query: 54
+Test case passed and position is 2
+cards: [54, 54, 54, 54, 53, 52, 51]
+query: 54
+Test case passed and position is 0
+cards: [54, 54, 54, 54, 52, 52, 51]
+query: 52
+Binary Search
+cards: [11]
+query: 
+Test case for no cards or query - passed
+cards: [55, 55, 54, 54, 52, 51]
+query: 54
+Test case passed and position is 2
+cards: [54, 54, 54, 54, 53, 52, 51]
+query: 54
+Test case passed and position is 0
+cards: [54, 54, 54, 54, 52, 52, 51]
+query: 52
+Binary Search
+cards: [11]
+query: 
+Test case for no cards or query - passed
+cards: [55, 55, 54, 54, 52, 51]
+query: 54
+Test case passed and position is 2
+cards: [54, 54, 54, 54, 53, 52, 51]
+query: 54
+Test case passed and position is 0
+cards: [54, 54, 54, 54, 52, 52, 51]
+query: 52
+Test case passed and position is 4
+Binary Search
+cards: [11]
+query: 
+Test case for no cards or query - passed
+cards: [55, 55, 54, 54, 52, 51]
+query: 54
+Test case passed and position is 2
+cards: [54, 54, 54, 54, 53, 52, 51]
+query: 54
+Test case passed and position is 0
+cards: [54, 54, 54, 54, 52, 52, 51]
+query: 52
+Test case passed and position is 4
+Binary Search
+cards: [11]
+query: 
+Test case for no cards or query - passed
+cards: [55, 55, 54, 54, 52, 51]
+query: 54
+Test case passed and position is 2
+cards: [54, 54, 54, 54, 53, 52, 51]
+query: 54
+Test case passed and position is 0
+cards: [54, 54, 54, 54, 52, 52, 51]
+query: 51
+Test case passed and position is 6
