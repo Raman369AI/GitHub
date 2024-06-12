@@ -27,6 +27,7 @@ def binary_search(cards,query):
 def locate_cards_first(cards,query):
     length = len(cards)-1
     position = 0
+    result = -1
     if  length == 0 or query == '':
             return -1
     while position <= length:
@@ -38,7 +39,6 @@ def locate_cards_first(cards,query):
             length = middle -1
         elif query < cards[middle]:
             position = middle + 1
-            
     return result
 
 def locate_cards_last(cards,query):
