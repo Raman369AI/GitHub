@@ -58,4 +58,6 @@ Not enough
 Season: The time of year when the mushroom appears. Different species fruit in different seasons, which helps in identification.
 Works
 
+The approach was to use LightGBM and using it with Monte carlo resampling and constructing a pipeline to apply the transformations to the folds to prevent any data leakage.
+
 
