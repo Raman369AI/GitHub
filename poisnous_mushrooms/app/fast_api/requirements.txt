@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+numpy
+pandas
+lightgbm
+streamlit
+scikit-learn
+requests
+# Add other dependencies as needed
