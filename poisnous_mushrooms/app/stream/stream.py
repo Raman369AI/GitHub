@@ -55,7 +55,7 @@ if st.button("Submit"):
 
     # Send the request to the FastAPI prediction endpoint
     try:
-        response = requests.post("http://fastapi:8000/predict", json=input_data)
+        response = requests.post("https://raman12345-bzg7bhdkfbh4beft.centralindia-01.azurewebsites.net/predict", json=input_data)
         response.raise_for_status()  # Raise an error for bad responses
 
         # Get the prediction from the response

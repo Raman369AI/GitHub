@@ -6,7 +6,7 @@ services:
       context: ./fast_api
       dockerfile: Dockerfile.dockerfile  # Explicitly points to Dockerfile.dockerfile
     ports:
-      - "8000:8000"
+      - "8000:80"
     networks:
       - my_network
 
