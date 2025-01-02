@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 140vmin;
   pointer-events: none;
 }
 
@@ -16,7 +16,7 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -36,3 +36,63 @@
     transform: rotate(360deg);
   }
 }
+#heading{
+  color: #132743;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 80px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+#description{
+  color: #132743;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+body {
+  background-color: #ffcbcb;
+  margin: 0;
+  padding: 0;
+}
+
+.btn{
+  color: white;
+  background-color:#407088 ;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  list-style: none;
+  text-decoration: none;}
+
+  .nav-container {
+    position: top;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffcbcb;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .nav-item {
+    display: inline-block;
+    margin: 0 10px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  #container-fluid{
+    display: grid;
+    justify-content: center;
+    background-color: #ffcbcb;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+  }
+  
