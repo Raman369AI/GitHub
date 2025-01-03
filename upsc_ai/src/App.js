@@ -2,9 +2,13 @@ import './App.css';
 import Nav from './Nav.js'
 import { Routes, Route } from 'react-router-dom';
 import Quiz from './Quiz.js';
+import Header from './Header.js';
+
 function App() {
   return (
     <div id = "container-fluid">
+      <Header />
+
       <HomeContent />
       <div id = "nav-container">
       <Nav />
