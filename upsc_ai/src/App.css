@@ -71,28 +71,28 @@ body {
   list-style: none;
   text-decoration: none;}
 
-  .nav-container {
-    position: top;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #ffcbcb;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000;
-  }
-  
-  .nav-item {
-    display: inline-block;
-    margin: 0 10px;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
   #container-fluid{
     display: grid;
     justify-content: center;
     background-color: #ffcbcb;
     font-family: 'Times New Roman', Times, serif;
-    height: 100vh;
   }
+ 
+  #nav-container {
+    justify-content: center;
+    position: top;
+    background-color: #ffcbcb;
+    padding: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+    display:inline-flex;
+    justify-content: left;
+  }
+  
+  #nav-item {
+    justify-content: left;
+    display: inline-flex;
+    font-family: 'Times New Roman', Times, serif;
+    position: top;
+  }
+
   

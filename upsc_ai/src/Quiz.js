@@ -88,9 +88,11 @@ const Quiz = () => {
         </div>
         </div>
       ))}
-        <Button onClick={handleNextQuestion} class = "btn btn-primary">
-          {activeQuestion < quizData.length - 1 ? 'Next Question' : 'Finish Quiz'}
-        </Button>
+        <button onClick={handleNextQuestion} 
+        class = "btn btn-primary" 
+        disabled={selectedAnswer === ''}>
+                    {activeQuestion < quizData.length - 1 ? 'Next Question' : 'Finish Quiz'}
+        </button>
     </div>
   );
 };

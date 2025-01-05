@@ -8,7 +8,6 @@ function App() {
   return (
     <div id = "container-fluid">
       <Header />
-
       <HomeContent />
       <div id = "nav-container">
       <Nav />
