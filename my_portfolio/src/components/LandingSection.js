@@ -3,9 +3,9 @@ import { Avatar, Heading, VStack } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection"; 
  
 const greeting = "Hello, I am Raman!"; 
-const bio1 = "A frontend developer"; 
-const bio2 = "specialized in React"; 
- 
+const bio1 = "A Data Scientist"; 
+const bio2 = "specialized in Machine Learning and Natural Language Processing"; 
+const rt = require("../images/IMGL9741.jpg");
 const LandingSection = () => ( 
  <FullScreenSection 
    justifyContent="center" 
@@ -16,7 +16,7 @@ const LandingSection = () => (
    <VStack spacing={16}> 
      <VStack spacing={4} alignItems="center"> 
        <Avatar 
-         src="https://i.pravatar.cc/150?img=7" 
+         src={rt}
          size="2xl" 
          name="Your Name" 
        /> 
@@ -25,10 +25,10 @@ const LandingSection = () => (
        </Heading> 
      </VStack> 
      <VStack spacing={6}> 
-       <Heading as="h1" size="3xl" noOfLines={1}> 
+       <Heading as="h1" size="2xl" noOfLines={1}> 
          {bio1} 
        </Heading> 
-       <Heading as="h1" size="3xl" noOfLines={1}> 
+       <Heading as="h1" size="xl" noOfLines={2}> 
          {bio2} 
        </Heading> 
      </VStack> 

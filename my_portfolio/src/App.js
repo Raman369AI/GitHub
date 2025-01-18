@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactMeSection from "./components/ContactMeSection";
+import TechnologiesSection from "./components/TechnologiesSection";
 import Footer from "./components/Footer";
 import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
@@ -15,6 +16,7 @@ function App() {
           <Header />
           <LandingSection />
           <ProjectsSection />
+            <TechnologiesSection />
           <ContactMeSection />
           <Footer />
           <Alert />

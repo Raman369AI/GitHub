@@ -3,16 +3,30 @@ import Nav from './Nav.js'
 import { Routes, Route } from 'react-router-dom';
 import Quiz from './Quiz.js';
 import Header from './Header.js';
+import { useLocation } from 'react-router-dom';
+
 
 function App() {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   return (
-    <div id = "container-fluid">
+    isHomePage?<div id = "container-fluid">
       <Header />
-      <HomeContent />
+      <Routes>
+      <Route path="/" element={<HomeContent />} />
+      <Route path="/Modern-History" element={<Quiz />} />
+     </Routes>
+     <div id = "nav-container">
+      <Nav />
+      </div>
+   </div>:<div id = "container-fluid">
+      <Header />
       <div id = "nav-container">
       <Nav />
       </div>
       <Routes>
+      <Route path="/" element={<HomeContent />} />
       <Route path="/Modern-History" element={<Quiz />} />
      </Routes>
    </div>
