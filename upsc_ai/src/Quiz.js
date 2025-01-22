@@ -2,6 +2,8 @@ import { useState } from 'react';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Button';
+import { Container, Box, ChakraProvider, HStack, VStack, defaultSystem, Card, Image , Heading, Highlight} from '@chakra-ui/react';
+import image from './image.png';
 
 
 // Then use it as React.useState in your component
@@ -57,43 +59,66 @@ const Quiz = () => {
   
   if (showResult) {
     return (
-      <div class = "alert alert-success" role = 'alert'>
-        <card>
-        <alert>
-        <h2>Quiz Results</h2>
-        <p>Score: {result.score}</p>
-        <p>Correct Answers: {result.correctAnswers}</p>
-        <p>Wrong Answers: {result.wrongAnswers}</p>
-        </alert>
-        </card>
-      </div>
+      <Container centerContent = 'true' fluid = 'true' mt = "18" mb = "18">
+      <Card.Root width = "500px" height = "500px" color = "teal" variant = "elevated" alignSelf={"center"}>
+        <Card.Body gap = "2">
+        <Card.Title>Quiz Results</Card.Title>
+        <Heading size = 'sm' color = "#1352c">Score: {result.score}</Heading>
+        <Heading size = 'sm'>Correct Answers: {result.correctAnswers}</Heading>
+        <Heading size = 'sm'>Wrong Answers: {result.wrongAnswers}</Heading>
+        </Card.Body>
+      </Card.Root>
+      </Container>
     );
   }
 
   return (
-    <div>
-      <h1>Quiz</h1>
-      <h3>Question <Badge bg="dark">{activeQuestion+1}</Badge></h3>
+    <ChakraProvider value={defaultSystem}>
+      <Box bg = "#e1eacd" color = "#01352c" borderRadius = "md" data-state="open"
+  _open={{
+    animation: "fade-in 300ms ease-out",
+  }}
+ >
+
+    <Card.Root width = "700px" height = "700px" bg = "#e1eacd" color = "#01352c" variant = "elevated">
+      <Card.Title><VStack>Quiz</VStack>Question <Badge bg="dark">{activeQuestion+1}</Badge></Card.Title>
+
       <h2>{quizData[activeQuestion].question}</h2>
+      <Card.Body mt = "2" mb = "2">
+      <VStack spacing={4} align="stretch">
       {quizData[activeQuestion].options.map((option, index) => (
-        <div class="card">
-          <div class="card-body">
-        <Button class = "btn btn-primary"
+        <Button
           key={index} 
           onClick={() => handleAnswerSelection(option)}
-          disabled={selectedAnswer !== ''}
+          disabled={selectedAnswer !== ''} colorPalette = "#01352c" variant = "elevated" mt = "4" mb = "4" bg = "#61b390" px = "0.5" py = "0.5" 
         >
-          {option}
+          <Highlight query={selectedAnswer} bg = "#61b390" px = "0.5">{option}</Highlight>
         </Button>
-        </div>
-        </div>
-      ))}
-        <button onClick={handleNextQuestion} 
-        class = "btn btn-primary" 
-        disabled={selectedAnswer === ''}>
-                    {activeQuestion < quizData.length - 1 ? 'Next Question' : 'Finish Quiz'}
-        </button>
-    </div>
+
+      ))}        
+
+<Button
+  onClick={handleNextQuestion}
+  disabled={selectedAnswer === ''}
+  style={{
+    backgroundColor: '#01352c',
+    borderColor: '#61b390',
+    color: '#bad8b6',
+    marginTop: '24px',
+  }}
+>
+  {activeQuestion < quizData.length - 1 ? 'Next Question' : 'Finish Quiz'}
+</Button>
+
+        </VStack>
+        </Card.Body>
+
+        </Card.Root>
+        </Box>
+
+
+    </ChakraProvider>
+
   );
 };
 

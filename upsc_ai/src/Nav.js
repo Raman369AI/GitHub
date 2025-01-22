@@ -1,28 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, List } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import { Container, Box, ChakraProvider, HStack, VStack, defaultSystem, Card, Image , Heading, Highlight} from '@chakra-ui/react';
 
 function Nav() {
     return (
-        <nav className="main-nav">
+        <Container centerContent = 'true' fluid = 'true'>
+        <nav>
             <ul style={{ display: 'flex', listStyleType: 'none', padding: 0, margin: 0 }}>
                 <li style={{ marginRight: '10px' }}>
-                    <Button variant="primary" class = "btn btn-primary">
-                        <Link to="/" className="nav-item" style={{ color: 'white', textDecoration: 'none' }}>
+                    <Button variant="elevated" colorPalette = "#01352c" colorScheme = "teal">
+                        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
                             Home
                         </Link>
                     </Button>
                 </li>
                 <li>
-                    <Button variant="primary" class = "btn btn-primary">
-                        <Link to="/Modern-History" className="nav-item" style={{ color: 'white', textDecoration: 'none' }}>
+                    <Button variant="elevated" colorPalette = "#01352c" colorScheme = "teal">
+                        <Link to="/Modern-History" style={{ textDecoration: 'none', color: 'inherit' }}>
                             Modern Indian History
                         </Link>
                     </Button>
                 </li>
             </ul>
-            
         </nav>
+        </Container>
     );
 }
 

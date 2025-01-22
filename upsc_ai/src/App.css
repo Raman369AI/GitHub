@@ -45,25 +45,19 @@
 
 }
 
-#description{
-  color: #132743;
-  text-align: center;
-  text-transform: capitalize;
-  font-size: 40px;
-  font-family: 'Times New Roman', Times, serif;
-}
+
 
 
 
 body {
-  background-color: #ffcbcb;
+  background-color: #e1eacd;
   margin: 0;
   padding: 0;
 }
 
 .btn{
   color: white;
-  background-color:#407088 ;
+  background-color:#01352c ;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 20px;
@@ -74,14 +68,14 @@ body {
   #container-fluid{
     display: grid;
     justify-content: center;
-    background-color: #ffcbcb;
+    background-color: #e1eacd;
     font-family: 'Times New Roman', Times, serif;
   }
  
   #nav-container {
     justify-content: center;
     position: top;
-    background-color: #ffcbcb;
+    background-color: #e1eacd;
     padding: 10px 0;
     font-family: 'Times New Roman', Times, serif;
     display:inline-flex;
@@ -94,5 +88,10 @@ body {
     font-family: 'Times New Roman', Times, serif;
     position: top;
   }
-
+.home-content{
+  display: grid;
+  justify-content: center;
+  background-color: #e1eacd;
+  font-family: 'Times New Roman', Times, serif;
+}
   

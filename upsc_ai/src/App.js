@@ -4,6 +4,8 @@ import { Routes, Route } from 'react-router-dom';
 import Quiz from './Quiz.js';
 import Header from './Header.js';
 import { useLocation } from 'react-router-dom';
+import image from './image.png';
+import { ChakraProvider, HStack, defaultSystem, Image, Heading, Container } from '@chakra-ui/react';
 
 
 function App() {
@@ -11,34 +13,47 @@ function App() {
   const isHomePage = location.pathname === "/";
 
   return (
-    isHomePage?<div id = "container-fluid">
+    isHomePage?<ChakraProvider value={defaultSystem}><Container centerContent = 'true' fluid = 'true' mb = "24">
       <Header />
+      <HomeContent />
       <Routes>
-      <Route path="/" element={<HomeContent />} />
+      <Route path="/" element={<></>} />
       <Route path="/Modern-History" element={<Quiz />} />
      </Routes>
-     <div id = "nav-container">
-      <Nav />
-      </div>
-   </div>:<div id = "container-fluid">
+     <Container centerContent = 'true' fluid = 'true' mt="24"> <Nav /></Container>
+        </Container>
+        </ChakraProvider>:<ChakraProvider value={defaultSystem}>
+   <Container centerContent = 'true' fluid = 'true'>
       <Header />
-      <div id = "nav-container">
-      <Nav />
-      </div>
+      <HomeContent />
+      <Container centerContent = 'true' fluid = 'true'> <Nav /></Container>
       <Routes>
-      <Route path="/" element={<HomeContent />} />
+      <Route path="/" element={<></>} />
       <Route path="/Modern-History" element={<Quiz />} />
      </Routes>
-   </div>
-  );   
+     </Container>
+   </ChakraProvider>  );   
 }
 
 function HomeContent() {
   return (
-    <div>
-    <h1 id = "heading">UAI</h1>
-    <p id = "description">Civil service preparation aided by AI</p>
-    </div>
+
+      <Container centerContent = 'true' fluid = 'true'>
+        <HStack>
+<Image src={image} alt="UAI" boxSize = "150px" borderRadius = 'full' />
+<Heading 
+  id="description" 
+  color="#3152c" 
+  textAlign="center" 
+  width="50%" // Adjust width to control wrapping
+  fontSize="xl" // Adjust font size for better fit
+  lineHeight="2" // Adjust line height for readability
+>
+  Empowering UPSC aspirants
+</Heading>
+    </HStack>
+    </Container>
+
   );
 }
 
