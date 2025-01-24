@@ -4,21 +4,26 @@ import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Button';
 import { Container, Box, ChakraProvider, HStack, VStack, defaultSystem, Card, Image , Heading, Highlight} from '@chakra-ui/react';
 import image from './image.png';
-
-
+import {
+  DialogActionTrigger,
+  DialogBody,
+  DialogCloseTrigger,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogRoot,
+  DialogTitle,
+  DialogTrigger,
+} from '@chakra-ui/react'
 // Then use it as React.useState in your component
-const quizData = [
-  {
-    question: "What is the capital of France?",
-    options: ["London", "Berlin", "Paris", "Madrid"],
-    correctAnswer: "Paris"
-  },{
-    question: "What is the capital of France?",
-    options: ["London", "Berlin", "Paris", "Madrid"],
-    correctAnswer: "Paris"
-  },
-  // Add more questions...
-];
+const quizData = [{'question': 'Who burned foreign cloth?', 'correctAnswer': 'Gandhi', 'options': ['Shashi Tharoor', 'Ambedkar', 'Manusmriti', 'Gandhi']}, 
+{'question': 'Who burned Manusmriti?', 'correctAnswer': 'Ambedkar', 'options': ['Rafi-ud-Daula', 'Gandhi', 'Savarkar', 'Ambedkar']},
+{'question': 'Who was the Rohilla chief?', 'correctAnswer': 'Najib- ud-Daula', 'options': ['A.H. Ghuznavi', 'Aga Khan III', 'Muhammad Zafarullah Khan', 'Najib- ud-Daula']}, 
+{'question': "Who was the personal 'supreme agent' of Abdali?", 'correctAnswer': 'Najib- ud-Daula', 'options': ['Abdur Rehman', 'Abdali', 'Mir Bakhshi', 'Najib- ud-Daula']}, 
+{'question': 'Who joined Mulraj?', 'correctAnswer': 'Sher Singh', 'options': ['Mulraj', 'N.G. Chandavarkar', 'Sher Singh', 'R.G. Bhandarkar']}, 
+{'question': 'What led to a mass uprising in Multan?', 'correctAnswer': 'Both Mulraj and Sher Singh', 'options': ['Both Mulraj and Sher Singh', 'Sher Singh', 'Mulraj', 'Birsa Munda']}]
+
+
 
 const Quiz = () => {
   const [activeQuestion, setActiveQuestion] = useState(0)
@@ -57,30 +62,52 @@ const Quiz = () => {
     }
   };
   
-  if (showResult) {
-    return (
-      <Container centerContent = 'true' fluid = 'true' mt = "18" mb = "18">
-      <Card.Root width = "500px" height = "500px" color = "teal" variant = "elevated" alignSelf={"center"}>
-        <Card.Body gap = "2">
-        <Card.Title>Quiz Results</Card.Title>
-        <Heading size = 'sm' color = "#1352c">Score: {result.score}</Heading>
-        <Heading size = 'sm'>Correct Answers: {result.correctAnswers}</Heading>
-        <Heading size = 'sm'>Wrong Answers: {result.wrongAnswers}</Heading>
-        </Card.Body>
-      </Card.Root>
-      </Container>
-    );
-  }
-
+  
   return (
     <ChakraProvider value={defaultSystem}>
-      <Box bg = "#e1eacd" color = "#01352c" borderRadius = "md" data-state="open"
+      {showResult? (
+   
+   <DialogRoot  placement = "bottom" >
+    <DialogTrigger placement = "center">
+    <Button
+  variant="elevate"
+  style={{
+    position: "relative",
+    top: "-52px",      // Adjust vertical position
+    right: "-250px",    // Adjust horizontal position
+  }}
+>
+  Check results
+</Button>
+
+    </DialogTrigger>
+    <DialogContent>
+      <DialogHeader>
+        <DialogTitle>Dialog Title</DialogTitle>
+      </DialogHeader>
+      <DialogBody>
+      <Heading size = 'sm' color = "#1352c">Score: {result.score}</Heading>
+      <Heading size = 'sm'>Correct Answers: {result.correctAnswers}</Heading>
+      <Heading size = 'sm'>Wrong Answers: {result.wrongAnswers}</Heading>
+      </DialogBody>
+      <DialogFooter>
+        <DialogActionTrigger asChild>
+          <Button variant="outline">Close</Button>
+        </DialogActionTrigger>
+     
+      </DialogFooter>
+      <DialogCloseTrigger />
+    </DialogContent>
+  </DialogRoot>)
+  :
+      (<Box bg = "#e1eacd" color = "#01352c" borderRadius = "md" data-state="open"
   _open={{
     animation: "fade-in 300ms ease-out",
   }}
  >
 
     <Card.Root width = "700px" height = "700px" bg = "#e1eacd" color = "#01352c" variant = "elevated">
+    
       <Card.Title><VStack>Quiz</VStack>Question <Badge bg="dark">{activeQuestion+1}</Badge></Card.Title>
 
       <h2>{quizData[activeQuestion].question}</h2>
@@ -97,24 +124,26 @@ const Quiz = () => {
 
       ))}        
 
-<Button
-  onClick={handleNextQuestion}
-  disabled={selectedAnswer === ''}
-  style={{
-    backgroundColor: '#01352c',
-    borderColor: '#61b390',
-    color: '#bad8b6',
-    marginTop: '24px',
-  }}
->
-  {activeQuestion < quizData.length - 1 ? 'Next Question' : 'Finish Quiz'}
-</Button>
+    <Button
+    onClick={handleNextQuestion}
+    disabled={selectedAnswer === ''}
+    style={{
+      backgroundColor: '#01352c',
+      borderColor: '#61b390',
+      color: '#bad8b6',
+      marginTop: '24px',
+    }}
+  >
+    {activeQuestion < quizData.length - 1 ? 'Next Question' : 'Finish Quiz'}
+  </Button>
+  
+
 
         </VStack>
         </Card.Body>
 
         </Card.Root>
-        </Box>
+        </Box>)}
 
 
     </ChakraProvider>
@@ -123,4 +152,9 @@ const Quiz = () => {
 };
 
 export default Quiz
+
+
+
+
+
 

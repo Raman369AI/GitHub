@@ -5,34 +5,35 @@ import Quiz from './Quiz.js';
 import Header from './Header.js';
 import { useLocation } from 'react-router-dom';
 import image from './image.png';
-import { ChakraProvider, HStack, defaultSystem, Image, Heading, Container } from '@chakra-ui/react';
-
-
+import { ChakraProvider, HStack, defaultSystem, Image, Heading, Container,DecorativeBox } from '@chakra-ui/react';
+import Footer from './Footer.js';
+import FullScreenSection from './FullScreenSection'
+import LandingSection from './LandingSection'
 function App() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
-
   return (
-    isHomePage?<ChakraProvider value={defaultSystem}><Container centerContent = 'true' fluid = 'true' mb = "24">
-      <Header />
-      <HomeContent />
-      <Routes>
-      <Route path="/" element={<></>} />
-      <Route path="/Modern-History" element={<Quiz />} />
-     </Routes>
-     <Container centerContent = 'true' fluid = 'true' mt="24"> <Nav /></Container>
+    <ChakraProvider value={defaultSystem}>
+      <Container centerContent fluid mb="24">
+        <Header />
+        {isHomePage && <HomeContent />}
+        <Container centerContent fluid mt="8">
+          <Nav />
         </Container>
-        </ChakraProvider>:<ChakraProvider value={defaultSystem}>
-   <Container centerContent = 'true' fluid = 'true'>
-      <Header />
-      <HomeContent />
-      <Container centerContent = 'true' fluid = 'true'> <Nav /></Container>
-      <Routes>
-      <Route path="/" element={<></>} />
-      <Route path="/Modern-History" element={<Quiz />} />
-     </Routes>
-     </Container>
-   </ChakraProvider>  );   
+        <Routes>
+          <Route path="/" element={<></>} />
+          <Route path="/Modern-History" element={<Quiz />} />
+        </Routes>
+<Container maxW = 'span'mt = '100px'> 
+  <LandingSection />
+  </Container>
+       
+<FullScreenSection />
+
+      </Container>
+      <Footer />
+
+    </ChakraProvider> );   
 }
 
 function HomeContent() {
@@ -52,8 +53,8 @@ function HomeContent() {
   Empowering UPSC aspirants
 </Heading>
     </HStack>
-    </Container>
 
+    </Container>
   );
 }
 
