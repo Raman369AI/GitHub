@@ -57,5 +57,6 @@ function HomeContent() {
     </Container>
   );
 }
+document.title = "UAI";
 
 export default App;

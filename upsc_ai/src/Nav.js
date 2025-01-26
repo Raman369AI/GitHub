@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, List } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import { Container, Box, ChakraProvider, HStack, VStack, defaultSystem, Card, Image , Heading, Highlight} from '@chakra-ui/react';
+import image from './image.png';
 
 function Nav() {
     return (

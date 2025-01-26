@@ -5,7 +5,7 @@ import { Link, LinkOverlay, LinkBox, Stack, Text, Button } from "@chakra-ui/reac
 
 const greeting = "Important resources";
 const bio1 = "Tech assisted learning";
-const bio2 = "Catch the Buzz word AI";
+const bio2 = "Site is Under Development";
 
 const LandingSection = () => (
   <FullScreenSection
