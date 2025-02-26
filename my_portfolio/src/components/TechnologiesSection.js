@@ -1,8 +1,11 @@
 import React from "react";
 import { Box, Heading, VStack, Text, SimpleGrid, HStack } from "@chakra-ui/react";
-import { FaPython, FaJsSquare, FaRProject, FaDatabase, FaDocker } from "react-icons/fa";
-import { SiKeras, SiPytorch, SiFastapi, SiHuggingface, SiApachespark, SiLinux } from "react-icons/si";
-
+import { FaPython, FaJsSquare, FaRProject, FaDatabase, FaDocker, FaFileExcel,FaRegFileExcel,FaMicrosoft } from "react-icons/fa";
+import { SiKeras, SiPytorch, SiFastapi, SiHuggingface, SiApachespark, SiLinux,SiLangchain,SiOllama,SiReact,SiTableau,SiMongodb,SiLooker,SiDatabricks } from "react-icons/si";
+import { TbSql } from "react-icons/tb";
+import { VscAzure } from "react-icons/vsc";
+import { AiOutlineOpenAI } from "react-icons/ai";
+import { SiGooglecloud, SiMlflow } from "react-icons/si";
 const technologies = [
   {
     category: "Programming Languages",
@@ -26,44 +29,55 @@ const technologies = [
   {
     category: "Data Analysis & Visualization Tools",
     items: [
-      { name: "Excel", icon: <FaDatabase /> },
+      { name: "Excel", icon: <FaFileExcel /> },
       { name: "SAS", icon: <FaDatabase /> },
-      { name: "Tableau", icon: <FaDatabase /> },
-      { name: "Power BI", icon: <FaDatabase /> },
-      { name: "SQL Server Management Studio (SSMS)", icon: <FaDatabase /> },
-      { name: "MongoDB", icon: <FaDatabase /> },
-      { name: "Looker Studio", icon: <FaDatabase /> },
+      { name: "Tableau", icon: <SiTableau /> },
+      { name: "Power BI", icon: <FaRegFileExcel /> },
+      { name: "SQL Server Management Studio (SSMS)", icon: <TbSql /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "Looker Studio", icon: <SiLooker /> },
     ],
   },
   {
     category: "Cloud & DevOps Platforms",
     items: [
-      { name: "Azure", icon: <FaDatabase /> },
-      { name: "Databricks", icon: <FaDatabase /> },
-      { name: "Google Cloud Platform (GCP)", icon: <FaDatabase /> },
+      { name: "Azure", icon: <VscAzure /> },
+      { name: "Databricks", icon: <SiDatabricks /> },
+      { name: "Google Cloud Platform (GCP)", icon: <SiGooglecloud /> },
       { name: "Docker", icon: <FaDocker /> },
+    ],
+  },
+  {
+    category: "Agentic AI & RAG",
+    items: [
+      { name: "AutoGen 0.4", icon: <FaMicrosoft /> },
+      { name: "SmolAgents", icon: <SiHuggingface /> },
+      { name: "Langgraph & LangChain", icon: <SiLangchain /> },
+      { name: "LlamaIndex", icon: <SiOllama /> },
+      { name: "DSPy", icon: <SiOllama /> },
+
     ],
   },
   {
     category: "Other Expertise",
     items: [
-      { name: "Machine Learning", icon: <SiLinux /> },
-      { name: "Generative AI", icon: <SiLinux /> },
+      { name: "Machine Learning", icon: <AiOutlineOpenAI /> },
+      { name: "Generative AI", icon: <AiOutlineOpenAI /> },
       { name: "Linux", icon: <SiLinux /> },
-      { name: "Causal Machine Learning", icon: <SiLinux /> },
-      { name: "ML-Ops", icon: <FaDocker /> },
-      { name: "React.Js", icon: <FaJsSquare /> },
+      { name: "Causal Machine Learning", icon: <AiOutlineOpenAI /> },
+      { name: "ML flow", icon: <SiMlflow /> },
+      { name: "React.Js", icon: <SiReact /> },
     ],
   },
 ];
 
 const TechnologiesSection = () => {
   return (
-    <Box p={8} backgroundColor="#f7fafc">
+    <Box p={8} backgroundColor="#d59bf6">
       <Heading as="h1" size="xl" textAlign="center" mb={8}>
         Technologies & Expertise
       </Heading>
-      <SimpleGrid columns={[1, 2, 2]} spacing={8}>
+      <SimpleGrid columns={[2, 2, 2]} spacing={8}>
         {technologies.map((tech) => (
           <Box
             key={tech.category}
@@ -71,7 +85,7 @@ const TechnologiesSection = () => {
             borderWidth="1px"
             borderRadius="lg"
             boxShadow="md"
-            backgroundColor="white"
+            backgroundColor="#9896f1"
           >
             {/* Category Heading */}
             <Heading as="h2" size="md" mb={4}>

@@ -1,34 +1,40 @@
 import React from "react"; 
-import { Avatar, Heading, VStack } from "@chakra-ui/react"; 
+import { Avatar, Heading, VStack, Box } from "@chakra-ui/react"; 
 import FullScreenSection from "./FullScreenSection"; 
  
 const greeting = "Hello, I am Raman!"; 
-const bio1 = "A Data Scientist"; 
-const bio2 = "specialized in Machine Learning and Natural Language Processing"; 
+const bio1 = "an experienced Data Scientist"; 
+const bio2 = "Code lover, problem solver and a Data Scientist who thrives on tough challenges and never stops learning new skills"; 
 const rt = require("../images/IMGL9741.jpg");
 const LandingSection = () => ( 
  <FullScreenSection 
    justifyContent="center" 
    alignItems="center" 
    isDarkBackground 
-   backgroundColor="#2A4365" 
+   backgroundColor="#9896f1" 
  > 
-   <VStack spacing={16}> 
-     <VStack spacing={4} alignItems="center"> 
-       <Avatar 
+   <VStack spacing={4}> 
+     <VStack spacing={2} alignItems="center"> 
+
+     <Box
+          borderRadius="full"
+          overflow="hidden"
+          //boxSize={{ base: "150px", md: "200px", lg: "200px" }}
+          boxSize="400px"
+        >       <Avatar 
          src={rt}
-         size="2xl" 
-         name="Your Name" 
+         size="full" 
+         name="Raman" 
+         overflow="hidden"
        /> 
-       <Heading as="h4" size="md" noOfLines={1}> 
+       </Box>
+       <Heading as="h1" size="xl" noOfLines={1} color = 'black'> 
          {greeting} 
        </Heading> 
      </VStack> 
-     <VStack spacing={6}> 
-       <Heading as="h1" size="2xl" noOfLines={1}> 
-         {bio1} 
-       </Heading> 
-       <Heading as="h1" size="xl" noOfLines={2}> 
+     <VStack spacing={2}> 
+       
+       <Heading as="h1" size="md" noOfLines={1}> 
          {bio2} 
        </Heading> 
      </VStack> 

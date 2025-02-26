@@ -7,6 +7,7 @@ import TechnologiesSection from "./components/TechnologiesSection";
 import Footer from "./components/Footer";
 import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
+import Experience from "./components/Experience";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <main>
           <Header />
           <LandingSection />
+          <Experience />
           <ProjectsSection />
             <TechnologiesSection />
           <ContactMeSection />
