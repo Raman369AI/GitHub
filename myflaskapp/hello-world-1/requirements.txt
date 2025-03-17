@@ -1,0 +1,5 @@
+google-cloud-storage
+functions-framework
+python-dotenv
+requests
+datetime
