@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import os
 
 # Title of the web app
 st.title("Mushroom Predictor")
@@ -53,18 +54,28 @@ if st.button("Submit"):
         "season": season
     }
 
-    # Send the request to the FastAPI prediction endpoint
-    try:
-        response = requests.post("https://raman12345-bzg7bhdkfbh4beft.centralindia-01.azurewebsites.net/predict", json=input_data)
-        response.raise_for_status()  # Raise an error for bad responses
+    # Get the prediction API URL from environment variable
+    # PREDICTION_API_URL should be the full URL to the FastAPI /predict endpoint.
+    PREDICTION_API_URL = os.getenv("PREDICTION_API_URL")
 
-        # Get the prediction from the response
-        prediction = response.json().get("prediction")
-        prediction_placeholder.markdown(f"<h1 style='text-align: center; color: green;'>{prediction}</h1>", unsafe_allow_html=True)
+    if not PREDICTION_API_URL:
+        st.error("Error: PREDICTION_API_URL environment variable is not set.")
+    else:
+        # Send the request to the FastAPI prediction endpoint
+        try:
+            response = requests.post(PREDICTION_API_URL, json=input_data)
+            response.raise_for_status()  # Raise an error for bad responses
 
-        #st.success(f"Prediction: {prediction}")
-    except requests.exceptions.RequestException as e:
-        st.error(f"Error: {e}")
-    except Exception as e:
-        st.error("An unexpected error occurred.")
-#http://127.0.0.1:8000/predict
+            # Get the prediction from the response
+            prediction = response.json().get("prediction")
+            prediction_placeholder.markdown(f"<h1 style='text-align: center; color: green;'>{prediction}</h1>", unsafe_allow_html=True)
+
+            #st.success(f"Prediction: {prediction}")
+        except requests.exceptions.RequestException as e:
+            st.error(f"Error connecting to prediction API: {e}")
+        except Exception as e:
+            st.error(f"An unexpected error occurred: {e}")
+
+# Example local URL (if PREDICTION_API_URL is not set, for local dev):
+# if not PREDICTION_API_URL:
+#     st.info("PREDICTION_API_URL not set. For local development, it might be http://127.0.0.1:8000/predict")
