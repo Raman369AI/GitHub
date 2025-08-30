@@ -1,0 +1,16 @@
+name: myenv
+channels:
+  - defaults
+dependencies:
+  - python=3.8  # You can specify the Python version
+  - pandas
+  - scikit-learn
+  - numpy
+  - matplotlib  # For data visualization
+  - seaborn  # For statistical data visualization
+  - joblib  # For model serialization
+  - pip  # Ensure pip is installed
+  - pip:
+      - azure-ml-sdk  # Azure ML SDK
+      - flasgger  # For API documentation
+      - flask  # For web server

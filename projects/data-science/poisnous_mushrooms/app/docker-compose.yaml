@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  fastapi:
+    build:
+      context: ./fast_api
+      dockerfile: Dockerfile.dockerfile  # Explicitly points to Dockerfile.dockerfile
+    ports:
+      - "8000:80"
+    networks:
+      - my_network
+
+  streamlit:
+    build:
+      context: ./stream
+      dockerfile: Dockerfile.dockerfile  # Explicitly points to Dockerfile.dockerfile
+    ports:
+      - "8501:8501"
+    networks:
+      - my_network
+    environment:
+      - FASTAPI_URL=http://fastapi:8000
+
+networks:
+  my_network:
+    driver: bridge

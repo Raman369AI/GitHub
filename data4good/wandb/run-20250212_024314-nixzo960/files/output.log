@@ -1,4 +1,0 @@
-Map: 100%|██████████| 50/50 [00:00<00:00, 849.98 examples/s]
-Map: 100%|██████████| 2950/2950 [00:02<00:00, 1083.45 examples/s]
-/tmp/ipykernel_29946/110968179.py:1: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
-  trainer = Trainer(model=model, args=training_args,

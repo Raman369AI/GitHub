@@ -4,6 +4,5 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/NLP/NLP" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/qabot/First_agent_template" vcs="Git" />
   </component>
 </project>

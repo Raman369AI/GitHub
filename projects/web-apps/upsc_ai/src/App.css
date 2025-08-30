@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 140vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#heading{
+  color: #132743;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 80px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+
+
+
+body {
+  background-color: #e1eacd;
+  margin: 0;
+  padding: 0;
+}
+
+.btn{
+  color: white;
+  background-color:#01352c ;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  list-style: none;
+  text-decoration: none;}
+
+  #container-fluid{
+    display: grid;
+    justify-content: center;
+    background-color: #e1eacd;
+    font-family: 'Times New Roman', Times, serif;
+  }
+ 
+  #nav-container {
+    justify-content: center;
+    position: top;
+    background-color: #e1eacd;
+    padding: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+    display:inline-flex;
+    justify-content: left;
+  }
+  
+  #nav-item {
+    justify-content: left;
+    display: inline-flex;
+    font-family: 'Times New Roman', Times, serif;
+    position: top;
+  }
+.home-content{
+  display: grid;
+  justify-content: center;
+  background-color: #e1eacd;
+  font-family: 'Times New Roman', Times, serif;
+}
+  
