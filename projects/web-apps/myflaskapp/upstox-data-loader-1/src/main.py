@@ -24,14 +24,14 @@ def hello_get(request):
     bucket = storage_client.bucket(bucket_name)
 
 
-    # THIS CODE IS A MOCK FOR THE SAKE OF DEMO, YOU NEED TO GET AN ACTUAL CODE FROM UPSTOX.
-    # If you call this function again, this code will likely fail, because the code will be invalid.
-    code = "1UL15m"
+    upstox_auth_code = os.getenv("UPSTOX_AUTH_CODE")
+    if not upstox_auth_code:
+        return {"error": "UPSTOX_AUTH_CODE environment variable is required"}, 500
     base_url = "https://api.upstox.com/v2/historical-candle"
-    symbol = "NSE_EQ|INE002A01018"          # Replace with actual symbol
-    interval = "30minute"          # Replace with desired interval (e.g., '1min', '1day')
-    to_date = "2024-12-19"     # Replace with the desired end date
-    from_date = "2023-06-01"   # Replace with the desired start date
+    symbol = os.getenv("UPSTOX_SYMBOL", "NSE_EQ|INE002A01018")
+    interval = os.getenv("UPSTOX_INTERVAL", "30minute")
+    to_date = os.getenv("UPSTOX_TO_DATE", "2024-12-19")
+    from_date = os.getenv("UPSTOX_FROM_DATE", "2023-06-01")
 
     # Construct the full URL
     url = f"{base_url}/{symbol}/{interval}/{to_date}/{from_date}"

@@ -1,16 +1,17 @@
-import functions_framework
-import os
 import json
-from dotenv import load_dotenv
-from google.cloud import storage
-import requests
+import os
 from datetime import datetime
 
+import functions_framework
+import requests
+from dotenv import load_dotenv
+from google.cloud import storage
+
 load_dotenv()
+
 client_id = os.getenv("client_id")
 client_secret = os.getenv("client_secret")
 bucket_name = os.getenv("BUCKET")
-# UPSTOX_AUTH_CODE should be a temporary authorization code from the Upstox login flow.
 upstox_auth_code = os.getenv("UPSTOX_AUTH_CODE")
 
 def transform_upstox_data(data, symbol):

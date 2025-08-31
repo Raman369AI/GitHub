@@ -1,28 +1,35 @@
 import os
 import torch
-import streamlit
-import os
+import streamlit as st
 from dotenv import load_dotenv
-load_dotenv()
-torch.classes.__path__ = [os.path.join(torch.__path__[0], torch.classes.__file__)] 
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
-# or simply:
+load_dotenv()
+
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+OLLAMA_API_BASE = os.environ.get("OLLAMA_API_BASE", "http://localhost:11434")
+OLLAMA_API_KEY = os.environ.get("OLLAMA_API_KEY", "")
+
+if not GEMINI_API_KEY:
+    st.error("GEMINI_API_KEY environment variable is required")
+    st.stop()
+
 torch.classes.__path__ = []
-from smolagents import CodeAgent, LiteLLMModel, CodeAgent, HfApiModel,tool, ToolCallingAgent
+torch.set_num_threads(1)
+
+from smolagents import CodeAgent, LiteLLMModel, tool
+
 model = LiteLLMModel(
-    model_id= "ollama_chat/deepseek-r1:8b", # This model is a bit weak for agentic behaviours though
-    api_base="http://localhost:11434", # replace with 127.0.0.1:11434 or remote open-ai compatible server if necessary
-    api_key="", # replace with API key if necessary
-    num_ctx=8192 # ollama default is 2048 which will fail horribly. 8192 works for easy tasks, more is better. Check https://huggingface.co/spaces/NyxKrage/LLM-Model-VRAM-Calculator to calculate how much VRAM this will need for the selected model.
+    model_id="ollama_chat/deepseek-r1:8b",
+    api_base=OLLAMA_API_BASE,
+    api_key=OLLAMA_API_KEY,
+    num_ctx=8192
 )
 
-from smolagents import CodeAgent, LiteLLMModel, CodeAgent, HfApiModel,tool, ToolCallingAgent
 model_1 = LiteLLMModel(
-    model_id= "ollama_chat/qwen2.5-coder:latest", # This model is a bit weak for agentic behaviours though
-    api_base="http://localhost:11434", # replace with 127.0.0.1:11434 or remote open-ai compatible server if necessary
-    api_key="", # replace with API key if necessary
-    num_ctx=16000 # ollama default is 2048 which will fail horribly. 8192 works for easy tasks, more is better. Check https://huggingface.co/spaces/NyxKrage/LLM-Model-VRAM-Calculator to calculate how much VRAM this will need for the selected model.
+    model_id="ollama_chat/qwen2.5-coder:latest",
+    api_base=OLLAMA_API_BASE,
+    api_key=OLLAMA_API_KEY,
+    num_ctx=16000
 )
 
 @tool
@@ -35,9 +42,12 @@ def mathematical_agent_tool() -> str:
     import numpy as np
     from pmdarima import auto_arima
 
-    from smolagents import ToolCallingAgent
-    from smolagents.default_tools import FinalAnswerTool
-    prices = pd.read_csv("iphone_price_trends_updated.csv")
+    data_file = os.environ.get("PRICE_DATA_FILE", "data/iphone_price_trends_updated.csv")
+    
+    if not os.path.exists(data_file):
+        return "Error: Price data file not found. Please ensure the data file is available."
+    
+    prices = pd.read_csv(data_file)
     prices = prices.dropna(how='all')
     prices['Date'] = pd.to_datetime(prices['Date'], format='%Y-%m')
     df = prices[0:46]
