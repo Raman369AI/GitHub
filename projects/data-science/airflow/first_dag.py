@@ -3,6 +3,11 @@ from airflow import DAG
 from airflow.operators.bash import BashOperator
 
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 default_args = {'owner':'coder2j','retries':5,'retry_delay':timedelta(minutes=2)}
 
 

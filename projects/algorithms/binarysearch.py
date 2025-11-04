@@ -9,6 +9,11 @@ If the query is > n/2: low =mid + 1 and high = n - 1
 If the query is = n/2: low = high = mid
 '''
 import sys
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 def binary_search(cards,query):
     length = len(cards)-1
     position = 0

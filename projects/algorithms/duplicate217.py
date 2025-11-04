@@ -4,6 +4,11 @@
 # Keep track of all elements seen and quickly.
 #Hashset
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 def duplicate(x):
     all = set(x)
     if len(all) != len(x):

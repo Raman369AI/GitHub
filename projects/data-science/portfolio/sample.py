@@ -1,5 +1,10 @@
 import json
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 def filter_i1_data(json_string):
     """
     Filters a JSON string to select only the I1 interval data from the ohlc list.

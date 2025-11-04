@@ -5,6 +5,11 @@ The uniform data is the slope calculation which can be used to the determine the
 '''
 import sys
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 def locate_cards(cards,query):
     length = len(cards) - 1
     position = 0

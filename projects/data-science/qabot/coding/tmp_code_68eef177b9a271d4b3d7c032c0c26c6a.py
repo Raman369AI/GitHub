@@ -1,3 +1,8 @@
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 def count_primes(n):
     sieve = [True] * n
     for x in range(2, int(n**0.5) + 1):

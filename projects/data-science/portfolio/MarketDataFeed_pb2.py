@@ -9,6 +9,11 @@ from google.protobuf import symbol_database as _symbol_database
 from google.protobuf.internal import builder as _builder
 # @@protoc_insertion_point(imports)
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 _sym_db = _symbol_database.Default()
 
 

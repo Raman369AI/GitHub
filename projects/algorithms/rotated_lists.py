@@ -2,6 +2,11 @@
 Problem statement: Determine the minimum no of times a sorted list was rotated to obtain the target list at hand.
 '''
 import sys
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 def rotated_count(list_orig,list_mod):
     # Addressed the non existence of a list element, valueerror
     if len(list_mod) != 0:

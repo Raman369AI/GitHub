@@ -3,6 +3,11 @@ import requests
 import os
 
 # Title of the web app
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 st.title("Mushroom Predictor")
 
 # Create input fields for each feature

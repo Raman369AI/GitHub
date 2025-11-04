@@ -4,6 +4,11 @@ from google.cloud import pubsub_v1
 # project_id = "your-project-id"
 # subscription_id = "your-subscription-id"
 # Number of seconds the subscriber should listen for messages
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 timeout = 500.0
 
 subscriber = pubsub_v1.SubscriberClient()

@@ -1,4 +1,9 @@
 # Databricks notebook source
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 dbutils.fs.mount(source = "wasbs://projectle@leproject.blob.core.windows.net/",
                  mount_point ='/mnt/ptr',
                  extra_configs={'fs.azure.account.key.leproject.blob.core.windows.net':'LypsAbnvR5/yeTJXl2CS93nj2Bah0JbrrQOa7QFihkuavqhhYJojNJY3G8DkjgnEK+SiK7uXdFwB+AStuK5Mkg=='})

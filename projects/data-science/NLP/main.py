@@ -11,6 +11,11 @@ import pandas as pd
 import re
 import nltk
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 reviews = pd.read_csv('/content/all_reviews.csv')
 
 nltk.download('wordnet')

@@ -8,6 +8,11 @@ import pandas as pd
 from io import StringIO
 from datetime import datetime, timedelta
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 @functions_framework.http
 def hello_get(request):
     """HTTP Cloud Function to fetch and store historical data from Upstox."""

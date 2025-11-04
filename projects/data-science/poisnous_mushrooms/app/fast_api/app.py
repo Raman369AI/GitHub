@@ -6,6 +6,11 @@ import pandas as pd
 import numpy as np
 from fastapi.templating import Jinja2Templates
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 app = FastAPI()
 
 # Load your model

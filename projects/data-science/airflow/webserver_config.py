@@ -28,6 +28,11 @@ from airflow.www.fab_security.manager import AUTH_DB
 # from airflow.www.fab_security.manager import AUTH_REMOTE_USER
 
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 # Flask-WTF flag for CSRF

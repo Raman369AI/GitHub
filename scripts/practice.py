@@ -1,5 +1,10 @@
 import asyncio
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 async def quick_background_task():
     print("Background task: Starting and finishing quickly.")
     return "Secret data"

@@ -7,6 +7,11 @@ import requests
 from dotenv import load_dotenv
 from google.cloud import storage
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 load_dotenv()
 
 client_id = os.getenv("client_id")

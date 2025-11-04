@@ -9,6 +9,11 @@ from sklearn.model_selection import train_test_split
 from onnxmltools.convert.common.data_types import FloatTensorType
 
 # Load and preprocess data
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 mushrooms = pd.read_csv("C://Users//raman//Downloads//train.csv", encoding_errors='ignore')
 mushrooms['cap-diameter'] = mushrooms['cap-diameter'].astype(float)
 

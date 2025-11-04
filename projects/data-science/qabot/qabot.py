@@ -8,6 +8,11 @@ from langchain.chains import RetrievalQA
 import gradio as gr
 
 # Suppress warnings
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 def warn(*args, **kwargs):
     pass
 

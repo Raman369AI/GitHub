@@ -3,6 +3,11 @@ import torch
 import streamlit as st
 from dotenv import load_dotenv
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 load_dotenv()
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")

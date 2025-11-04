@@ -1,4 +1,9 @@
 import sys
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 def locate_cards(cards,query):
     position = 0
     length = len(cards)

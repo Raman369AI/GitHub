@@ -10,6 +10,11 @@ import json
 import os
 from dotenv import load_dotenv
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 load_dotenv()
 access_token = os.getenv("access_token")
 

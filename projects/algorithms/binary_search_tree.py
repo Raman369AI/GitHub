@@ -8,6 +8,11 @@ i/p's username, name and email.
 '''
 
 
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 class User:
     counter = 0
     def __init__(self,username,name,email):

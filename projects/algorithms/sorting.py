@@ -1,3 +1,8 @@
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 def bubblesort(list):
     length = len(list)-1
     # The pass

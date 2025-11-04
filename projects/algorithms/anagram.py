@@ -3,6 +3,11 @@
 #ram and sat are not anagrams.
 #Case-1: If the lengths are not equal then they are not anagrams
 #Case-2: If they have different characters then they are not anagrams.
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 s = 'Raman'
 t = 'kanar'
 def isAnagram( s, t):

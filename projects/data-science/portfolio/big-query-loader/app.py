@@ -6,6 +6,11 @@ import os
 from flask import Flask, render_template
 
 # pylint: disable=C0103
+
+from logging_config import get_logger
+
+logger = get_logger(__name__)
+
 app = Flask(__name__)
 
 
